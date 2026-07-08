@@ -1,0 +1,46 @@
+{
+  "name": "@campudus/vendure-plugin-product-orders-info",
+  "version": "1.0.0",
+  "description": "Vendure Dashboard product detail block showing orders that contain the current product.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/campudus/vendure-plugin-product-orders-info.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Campudus GmbH",
+  "scripts": {
+    "build": "tsc -p tsconfig.package.json && cp -r dashboard dist/"
+  },
+  "keywords": [
+    "vendure",
+    "vendure-plugin",
+    "vendure-dashboard",
+    "orders",
+    "products"
+  ],
+  "peerDependencies": {
+    "@vendure/common": "^3.0.0",
+    "@vendure/core": "^3.0.0",
+    "@vendure/dashboard": "^3.0.0",
+    "graphql": "^16.0.0",
+    "graphql-tag": "^2.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

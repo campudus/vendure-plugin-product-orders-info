@@ -1,0 +1,15 @@
+node_modules/
+*.tgz
+
+*.local*
+
+.ai
+.cache
+.idea
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
+.github/skills/
+.junie
+
+HANDOFF.md

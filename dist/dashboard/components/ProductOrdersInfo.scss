@@ -1,0 +1,191 @@
+.product-orders-info {
+  $color-grey-100: #fafafa;
+  $color-grey-200: #f2f3f5;
+  $color-grey-300: #bfc3cc;
+  $color-grey-400: #97979a;
+  $color-grey-500: #525456;
+  $color-grey-600: #3f4445;
+  $color-grey-700: #303233;
+  $color-primary-500: #19c2ff;
+  $color-table-header-border: #d9d9d9;
+  $color-component-bg-100: #fafafa;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .product-orders-info__search {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid $color-grey-300;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: $color-primary-500;
+    }
+
+    &::placeholder {
+      color: $color-grey-400;
+    }
+  }
+
+  .order-link {
+    color: $color-primary-500;
+    height: auto;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .no-orders {
+    padding: 16px 0;
+    color: $color-grey-500;
+    font-style: italic;
+  }
+
+  .orders-table {
+    width: 100%;
+    margin-top: 10px;
+
+    tr {
+      display: grid;
+      grid-template-columns: 1fr 2fr 0.4fr 0.6fr 0.5fr;
+
+      &:hover {
+        background: $color-grey-200;
+      }
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid $color-grey-200;
+      display: flex;
+      align-items: center;
+      padding: 6px 8px;
+    }
+
+    th.left,
+    td.left {
+      text-align: left;
+    }
+
+    th:last-of-type,
+    td:last-of-type {
+      border-inline-end: none;
+    }
+
+    th.sortable {
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $color-grey-100;
+      }
+    }
+
+    .sort-indicator {
+      margin-left: 4px;
+      font-size: 12px;
+
+      &.inactive {
+        opacity: 0.3;
+      }
+
+      &.active {
+        color: $color-primary-500;
+      }
+    }
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+
+      td {
+        border-bottom: none;
+      }
+
+      td:last-of-type {
+        padding-left: 14px;
+      }
+    }
+
+    tfoot {
+      td {
+        border-top: 1px solid $color-table-header-border;
+      }
+
+      td:last-of-type {
+        padding-left: 12px;
+      }
+    }
+
+    .cell-content {
+      &.right {
+        text-align: right;
+      }
+
+      &.center {
+        text-align: center;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 12px 0;
+    border-top: 1px solid $color-grey-200;
+    flex-wrap: wrap;
+  }
+
+  .pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid $color-grey-300;
+    border-radius: 4px;
+    background: $color-component-bg-100;
+    color: $color-grey-700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+      background: $color-grey-100;
+      border-color: $color-primary-500;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .pagination-info {
+    padding: 0 12px;
+    font-size: 14px;
+    color: $color-grey-600;
+  }
+}

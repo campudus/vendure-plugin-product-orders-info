@@ -1,0 +1,20 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "sourceMap": true
+  },
+  "include": [
+    "index.ts",
+    "ProductOrdersInfoPlugin.ts",
+    "constants.ts",
+    "types.ts",
+    "api/ProductOrdersInfoAdminResolver.ts",
+    "api/graphql/admin/admin-api-extensions.ts",
+    "service/ProductOrdersInfoService.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
