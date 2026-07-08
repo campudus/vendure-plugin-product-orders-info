@@ -1,15 +1,17 @@
+.idea
 node_modules/
 *.tgz
 
 *.local*
 
+# AI
 .ai
-.cache
-.idea
-.github/copilot-instructions.md
+.claude
+.codex
+.cursor
+.junie
+.openai
 .github/instructions/
 .github/prompts/
 .github/skills/
-.junie
-
-HANDOFF.md
+HANDOFF*.md
