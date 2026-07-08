@@ -25,7 +25,7 @@ import { ProductOrdersInfoService } from "./service/ProductOrdersInfoService";
     ProductOrdersInfoService,
   ],
   exports: [ProductOrdersInfoService],
-  compatibility: "^3.0.0",
+  compatibility: "^3.5.0",
   adminApiExtensions: {
     schema: adminApiExtensions,
     resolvers: [ProductOrdersInfoAdminResolver],

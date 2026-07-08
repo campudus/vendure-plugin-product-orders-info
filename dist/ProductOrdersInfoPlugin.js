@@ -53,7 +53,7 @@ exports.ProductOrdersInfoPlugin = ProductOrdersInfoPlugin = ProductOrdersInfoPlu
             ProductOrdersInfoService_1.ProductOrdersInfoService,
         ],
         exports: [ProductOrdersInfoService_1.ProductOrdersInfoService],
-        compatibility: "^3.0.0",
+        compatibility: "^3.5.0",
         adminApiExtensions: {
             schema: admin_api_extensions_1.adminApiExtensions,
             resolvers: [ProductOrdersInfoAdminResolver_1.ProductOrdersInfoAdminResolver],

@@ -35,9 +35,9 @@
     "products"
   ],
   "peerDependencies": {
-    "@vendure/common": "^3.0.0",
-    "@vendure/core": "^3.0.0",
-    "@vendure/dashboard": "^3.0.0",
+    "@vendure/common": "^3.5.0",
+    "@vendure/core": "^3.5.0",
+    "@vendure/dashboard": "^3.5.0",
     "graphql": "^16.0.0",
     "graphql-tag": "^2.0.0",
     "react": ">=18",

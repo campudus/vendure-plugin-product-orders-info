@@ -4,6 +4,8 @@ Adds an order overview block to the Vendure Dashboard product detail page. The b
 
 ## Installation
 
+Requires Vendure 3.5 or newer as the plugin ships a Vendure Dashboard extension.
+
 ```bash
 # Latest (main branch):
 npm install github:campudus/vendure-plugin-product-orders-info
