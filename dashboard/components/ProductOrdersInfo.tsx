@@ -1,3 +1,4 @@
+import { Trans, useLingui } from "@lingui/react/macro";
 import { api, DetailPageButton, useLocalFormat, useQuery } from "@vendure/dashboard";
 import gql from "graphql-tag";
 import { useMemo, useState } from "react";
@@ -52,6 +53,7 @@ const GET_PRODUCT_ORDERS = gql`
 `;
 
 export function ProductOrdersInfo({ productId }: { productId: string }) {
+  const { t } = useLingui();
   const { formatCurrency, formatDate } = useLocalFormat();
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -152,17 +154,19 @@ export function ProductOrdersInfo({ productId }: { productId: string }) {
     return null;
   }
 
+  const filteredCount = filteredOrders.length;
+
   return (
     <div className="product-orders-info">
       {orderList.items.length === 0 ? (
-        <div className="no-orders">No orders found</div>
+        <div className="no-orders"><Trans>No orders found</Trans></div>
       ) : (
         <>
           <div className="product-orders-info__search">
             <input
               type="text"
               className="search-input"
-              placeholder="Search by order code or customer name"
+              placeholder={t`Search by order code or customer name`}
               value={searchTerm}
               onChange={event => {
                 setSearchTerm(event.target.value);
@@ -172,30 +176,30 @@ export function ProductOrdersInfo({ productId }: { productId: string }) {
           </div>
 
           {filteredOrders.length === 0 ? (
-            <div className="no-orders">No matching orders found</div>
+            <div className="no-orders"><Trans>No matching orders found</Trans></div>
           ) : (
             <>
               <table className="orders-table">
                 <thead>
                   <tr className="heading-row">
                     <th className="cell-content left sortable" onClick={() => handleSort("orderCode")}>
-                      Order {sortIndicator("orderCode")}
+                      <Trans>Order</Trans> {sortIndicator("orderCode")}
                     </th>
 
                     <th className="cell-content left sortable" onClick={() => handleSort("customer")}>
-                      Customer {sortIndicator("customer")}
+                      <Trans>Customer</Trans> {sortIndicator("customer")}
                     </th>
 
                     <th className="cell-content center sortable" onClick={() => handleSort("quantity")}>
-                      Qty {sortIndicator("quantity")}
+                      <Trans>Quantity</Trans> {sortIndicator("quantity")}
                     </th>
 
                     <th className="cell-content right sortable" onClick={() => handleSort("orderDate")}>
-                      Date {sortIndicator("orderDate")}
+                      <Trans>Date</Trans> {sortIndicator("orderDate")}
                     </th>
 
                     <th className="cell-content right sortable" onClick={() => handleSort("totalWithTax")}>
-                      Total {sortIndicator("totalWithTax")}
+                      <Trans>Total</Trans> {sortIndicator("totalWithTax")}
                     </th>
                   </tr>
                 </thead>
@@ -242,7 +246,7 @@ export function ProductOrdersInfo({ productId }: { productId: string }) {
                   </button>
 
                   <span className="pagination-info">
-                    Page {currentPage} of {totalPages} ({filteredOrders.length} results)
+                    <Trans>Page {currentPage} of {totalPages} ({filteredCount} results)</Trans>
                   </span>
 
                   <button
