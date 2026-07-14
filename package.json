@@ -1,6 +1,6 @@
 {
   "name": "@campudus/vendure-plugin-product-orders-info",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Vendure Dashboard product detail block showing orders that contain the current product.",
   "license": "MIT",
   "main": "dist/index.js",

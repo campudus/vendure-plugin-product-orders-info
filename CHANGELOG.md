@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2 (2026-07-14)
+
+- Make `tsconfig.package.json` self-contained.
+
 ## 1.1.1 (2026-07-09)
 
 - Require Vendure 3.5 or newer because the plugin registers a Vendure Dashboard extension.
