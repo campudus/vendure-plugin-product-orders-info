@@ -84,3 +84,7 @@ Build the package:
 ```bash
 npm run build
 ```
+
+## License
+
+MIT — © Campudus GmbH
